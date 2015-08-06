@@ -262,11 +262,15 @@
                 }
               }
             } else if (w) {
-              ret.w = w;
-              ret.h = Math.ceil(w / scale);
+              if(w < ret.w){
+                ret.w = w;
+                ret.h = Math.ceil(w / scale);
+              }
             } else if (h) {
-              ret.w = Math.ceil(h * scale);
-              ret.h = h;
+              if(h < ret.h){
+                ret.w = Math.ceil(h * scale);
+                ret.h = h;
+              }
             }
 
             // 超过这个值base64无法生成，在IOS上

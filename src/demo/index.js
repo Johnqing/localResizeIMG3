@@ -4,8 +4,7 @@
     input.onchange = function () {
         // 也可以传入图片路径：lrz('../demo.jpg', ...
         lrz(this.files[0], {
-			width:1200,
-			height:900,
+            width:1200,
             before: function() {
                 console.log('压缩开始');
             },
